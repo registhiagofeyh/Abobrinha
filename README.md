@@ -1,4 +1,0 @@
-Abobrinha
-=========
-
-Trabalho em Java
