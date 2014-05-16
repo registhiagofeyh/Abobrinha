@@ -19,7 +19,7 @@ class Interpretador {
 				if(linhas[i].contains("mostre-me")){
 					I.imprima(linhas[i]);
 				}
-                System.out.println(this.linhas[i]);
+           //     System.out.println(this.linhas[i]); // usado pra ver se está lendo as linhas que entram no programa;
 				
             }
         }

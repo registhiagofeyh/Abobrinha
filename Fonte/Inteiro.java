@@ -15,6 +15,7 @@ class Inteiro{
 			nome[m]+=xy.charAt(a);
 			a++;				
 		}
+	//	System.out.println(nome[m]);  //usado pra testar se a variavel esta realmente sendo declarada;
 	}
 	public void setValor(String xy){
 		a=0;
@@ -31,7 +32,7 @@ class Inteiro{
 			a++;
 		}
 		valor[this.getIndice(inter)]=Integer.parseInt(numero);
-		System.out.println(inter+"  " + getIndice(inter)+"   "+numero);
+	//	System.out.println(inter+" " + getIndice(inter)+" "+numero); //usado pra testar o indice e a atribuicao do valor;
 	}
 	public int getValor(int id){
 		return this.valor[id];

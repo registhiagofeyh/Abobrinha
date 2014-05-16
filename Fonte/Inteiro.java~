@@ -2,48 +2,48 @@ class Inteiro{
 	private int indice[] = new int[1000];
 	private int valor[] = new int[1000];
 	private String nome[] = new String[1000];
-	private String inter;
-	private int m,a,b;
+	private String inter=new String(),numero=new String();
+	private int m,a,b,c;
 
 
 	public void instancia(String xy){
 		xy = xy.replace(" ", "");	
-		b=3;
-		do{
-			m=this.acrescentaindice();
-			a=b;
-			nome[m]="";
-			while(xy.charAt(a)!='.'&&xy.charAt(a)!=','&&xy.charAt(a)!=':'){
-				nome[m]+=xy.charAt(a);
-				a++;
-			}
-			System.out.println("NOME: "+nome[m]);
-			if(xy.charAt(a)==':'){
-				a++;
-				inter="";
-				while(xy.charAt(a)!='.'&&xy.charAt(a)!=','){
-					inter+=xy.charAt(a);
-						a++;
-				}
-				this.setValor(inter,m);
-			}
-			if(xy.charAt(a)==','){
-				break;
-			}
-		}while(xy.charAt(a)=='.');		
+		m=this.acrescentaindice();
+		a=3;
+		nome[m]="";
+		while(xy.charAt(a)!=','){
+			nome[m]+=xy.charAt(a);
+			a++;				
+		}
+	//	System.out.println(nome[m]);  //usado pra testar se a variavel esta realmente sendo declarada;
 	}
-	public void setValor(String numero,int id){
-		valor[id]=Integer.parseInt(numero);
+	public void setValor(String xy){
+		a=0;
+		xy = xy.replace(" ", "");
+		inter="";	
+		while(xy.charAt(a)!=':'){
+			inter+=xy.charAt(a);
+			a++;
+		}
+		a++;
+		numero="";
+		while(xy.charAt(a)!=','){
+			numero+=xy.charAt(a);
+			a++;
+		}
+		valor[this.getIndice(inter)]=Integer.parseInt(numero);
+		System.out.println(inter+" " + getIndice(inter)+" "+numero); //usado pra testar o indice e a atribuicao do valor;
 	}
 	public int getValor(int id){
 		return this.valor[id];
 	}
 	public int getIndice(String h){
-		for(a=0;a<1000;a++){
-			if(h.equals(nome[a]));
+		for(a=1;a<1000;a++){
+			if(h.equals(nome[a])){
 			break;
+			}
 		}
-		return this.indice[a+1];
+		return this.a;
 	}
 	private int acrescentaindice(){
 		for(a=0;a<1000;a++){
@@ -53,5 +53,20 @@ class Inteiro{
 			}
 		}
 		return this.indice[a];
+	}
+	public int qtIndice(){
+		for(a=0;this.indice[a]!=0;a++);
+		return a;
+	}
+	public void imprima(String xy){
+		xy = xy.replace("mostre-me ", "");
+		c=1;
+		b=this.qtIndice();
+		while(c<=b){
+			inter=""+valor[c];
+			xy = xy.replace(nome[c], inter);
+			c++;
+		}
+		System.out.println(xy);
 	}
 }
