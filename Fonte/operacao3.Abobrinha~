@@ -1,0 +1,7 @@
+iii multiplicacao,
+iii valorA,
+iii valorB,
+valorA:30,
+valorB:5,
+subtracao:valorA**valorB,
+mostre-me multiplicacao

@@ -1,0 +1,5 @@
+iii subtracao,
+iii valorA,
+valorA:33,
+subtracao:valorA--10,
+mostre-me subtracao

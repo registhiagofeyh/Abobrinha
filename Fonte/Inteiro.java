@@ -4,6 +4,7 @@ class Inteiro{
 	private String nome[] = new String[1000];
 	private String inter=new String(),numero=new String();
 	private int m,a,b,c;
+	private Operadores O = new Operadores();
 
 
 	public void instancia(String xy){
@@ -60,6 +61,10 @@ class Inteiro{
 	}
 	public void imprima(String xy){
 		xy = xy.replace("mostre-me ", "");
+		xy=this.trocaVar(xy);
+		System.out.println(xy);
+	}
+	public String trocaVar(String xy){
 		c=1;
 		b=this.qtIndice();
 		while(c<=b){
@@ -67,6 +72,11 @@ class Inteiro{
 			xy = xy.replace(nome[c], inter);
 			c++;
 		}
-		System.out.println(xy);
+		return xy;
+	}
+	public void opera(String xy){
+	xy=xy.replace(" ","");
+	xy=O.define(xy,this);
+	this.setValor(xy);
 	}
 }
