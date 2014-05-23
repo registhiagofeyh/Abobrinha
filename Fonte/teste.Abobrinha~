@@ -1,19 +1,9 @@
-Exemplo de código fonte da linguagem Blah
-Nesse arquivo devem o programador vai
-escrever o código do programa.
+iii &&a,
+&&a : 6,
+outracoisa &&a<<5,
+mostre-me &&a
+&&a : 1++&&a,
+mostre-me Ok
+fimdolac
 
-Esse texto aqui é apenas um exemplo.
-Não tem comando algum aqui.
-iii yu ,
-yu : 125 ,
-Ex.
-                     iii nun ,
-j = 9;
-        nun : 5 ,
-       iii sd ,
-       sd : 480 ,
-mostre-me nun
-
-nun : 45++12,
-mostre-me nun
-Ultima linha
+mostre-me Ok
