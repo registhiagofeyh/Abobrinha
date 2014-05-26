@@ -1,9 +1,8 @@
 iii &&a,
-&&a : 6,
-outracoisa &&a<<5,
+&&a : 0,
+
+laco &&a<<10,
 mostre-me &&a
 &&a : 1++&&a,
-mostre-me Ok
 fimdolac
-
-mostre-me Ok
+,

@@ -1,0 +1,4 @@
+iii &&idade,
+mostre-me informe a sua idade seguindo o padrão: &&+idade+:+"suaidade"+,
+
+mostre-me a sua idade é &&idade
