@@ -56,8 +56,18 @@ class Interpretador {
 						I.imprima(linhas[i]);
 					}
 					else if(linhas[i].contains("iii")){
-						I.instancia(linhas[i]);
-	                	}
+                        if(linhas[i].contains("{") || linhas[i].contains("}")){
+                            int chaves=0;
+                            for(int r=0;r<linhas[i].length();r++){
+                                chaves += (linhas[i].charAt(r) == '{')?1:0;
+                                chaves -= (linhas[i].charAt(r) == '}')?1:0;
+                            }
+                            if(chaves==0)
+                                I.instanciaStruct(linhas[i]);
+                        }else{
+						  I.instancia(linhas[i]);
+                        }
+	                }
 	                else if(linhas[i].contains("%%")||linhas[i].contains("--")||linhas[i].contains("//")||linhas[i].contains("**")||linhas[i].contains("++")){
 	                	I.opera(linhas[i]);
 	                }

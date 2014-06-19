@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Inteiro{
 	private int indice[] = new int[1000];
 	private int valor[] = new int[1000];
@@ -16,8 +18,22 @@ class Inteiro{
 			nome[m]+=xy.charAt(a);
 			a++;				
 		}
-	//	System.out.println(nome[m]);  //usado pra testar se a variavel esta realmente sendo declarada;
 	}
+
+	public void instanciaStruct(String linha){
+		String[] arr;
+		String first,parts;
+		arr = linha.split("\\{");
+		first=arr[0];
+		arr[1] = arr[1].trim().substring(0,arr[1].trim().length()-2);
+		parts = arr[1];
+		arr = parts.split(",");
+		for(int i=0;i<arr.length;i++){
+			if(arr[i].trim().length()>0)
+				this.instancia(first+"."+arr[i].trim()+",");
+		}
+	}
+
 	public void setValor(String xy){
 		a=0;
 		xy = xy.replace(" ", "");
