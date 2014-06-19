@@ -22,6 +22,7 @@ class Abobrinha {
                 linhas[i] = s.nextLine();
                 i++;
             }
+            linhas[i] = ",";
             
             b.interpreta(linhas);
             
