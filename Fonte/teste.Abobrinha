@@ -1,8 +1,23 @@
 iii &&a,
+iii &&b{campo1,campo2,,campo4            ,campo5},
 &&a : 0,
+&&b.campo1 : 3,
+&&b.campo2 : 2,
+&&b.campo4 : 4,
+&&b.campo5 : 5,
 
 laco &&a<<10,
 mostre-me &&a
 &&a : 1++&&a,
 fimdolac
-,
+
+mostre-me Valor do campo 1: &&b.campo1
+mostre-me Valor do campo 2: &&b.campo2
+mostre-me Valor do campo 4: &&b.campo4
+mostre-me Valor do campo 5: &&b.campo5
+
+se 1<<0,
+	mostre-me teste
+senao
+	mostre-me teste 2
+fimdose
