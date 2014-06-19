@@ -62,7 +62,7 @@ class Inteiro{
 	public void imprima(String xy){
 		xy = xy.replace("mostre-me ", "");
 		xy=this.trocaVar(xy);
-		System.out.println(xy);
+		System.out.println(xy.trim());
 	}
 	public String trocaVar(String xy){
 		c=1;
