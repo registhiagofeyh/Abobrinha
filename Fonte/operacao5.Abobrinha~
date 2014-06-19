@@ -1,9 +1,0 @@
-iii divisao,
-iii valorA,
-iii valorB,
-valorA:31,
-valorB:valorA++valorA,
-divisao:valorA//valorB,
-iii    resto,
-resto:valorA%%divisao,
-mostre-me resto
